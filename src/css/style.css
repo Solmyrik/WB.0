@@ -1,1 +1,50 @@
 @import url('normalize.css');
+@import url('variables.css');
+@import url('modules/header.css');
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../public/fonts/SegoeUI.woff') format('woff2'),
+    url('../../public/fonts/SegoeUI.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../public/fonts/SegoeUI-SemiBold.woff2') format('woff2'),
+    url('../../public/fonts/SegoeUI-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../public/fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../../public/fonts/SegoeUI-Bold.woff') format('woff');
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--purple);
+  font-size: 16px;
+}
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+main {
+  flex: 100%;
+}
+
+[class*='__container'] {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
