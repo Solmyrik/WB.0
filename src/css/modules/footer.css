@@ -1,0 +1,10 @@
+.footer {
+  text-align: center;
+  padding: 23px 0;
+}
+.footer__container {
+}
+.footer__copywriting {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}

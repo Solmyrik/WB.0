@@ -1,6 +1,7 @@
 @import url('normalize.css');
 @import url('variables.css');
 @import url('modules/header.css');
+@import url('modules/footer.css');
 
 @font-face {
   font-family: 'Segoe UI';
@@ -26,10 +27,14 @@
     url('../../public/fonts/SegoeUI-Bold.woff') format('woff');
 }
 
+html {
+  height: 100%;
+}
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--purple);
   font-size: 16px;
+  height: 100%;
 }
 .wrapper {
   overflow: hidden;
@@ -40,7 +45,7 @@ body {
 }
 
 main {
-  flex: 100%;
+  flex: 1 1 auto;
 }
 
 [class*='__container'] {
