@@ -1,0 +1,10 @@
+.page {
+  border-radius: 24px;
+  background-color: var(--light);
+}
+.page__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}

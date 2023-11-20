@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../public/fonts/SegoeUI.woff') format('woff2'),
+    url('../../public/fonts/SegoeUI.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../public/fonts/SegoeUI-SemiBold.woff2') format('woff2'),
+    url('../../public/fonts/SegoeUI-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../public/fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../../public/fonts/SegoeUI-Bold.woff') format('woff');
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--purple);
+  font-size: 16px;
+  height: 100%;
+}
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+[class*='__container'] {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}

@@ -92,7 +92,418 @@
       </header>
 
       <main class="page">
-        <section></section>
+        <div class="page__container">
+          <section class="cart">
+            <h1 class="cart__title">Корзина</h1>
+            <div class="cart__top top-cart">
+              <div class="top-cart__left">
+                <div class="checkbox">
+                  <label class="checkbox__label">
+                    <input type="checkbox" checked class="checkbox__input" />
+                    <span class="checkbox__fake"></span>
+                    <span class="checkbox__text">Выбрать все</span>
+                  </label>
+                </div>
+              </div>
+              <div class="top-cart__right">
+                <div class="top-cart__arrow">
+                  <img src="./public/images/cart/arrow.svg" alt="arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="cart__body body-cart">
+              <div class="body-cart__item">
+                <div class="body-cart__left">
+                  <div class="checkbox">
+                    <label class="checkbox__label">
+                      <input type="checkbox" checked class="checkbox__input" />
+                      <span class="checkbox__fake"></span>
+                    </label>
+                  </div>
+                  <div class="body-cart__img">
+                    <img src="./public/images/cart/item1.png" alt="product" />
+                  </div>
+                  <div class="body-cart__content">
+                    <h3 class="body-cart__title">Футболка UZcotton мужская</h3>
+                    <div class="body-cart__values">
+                      <p class="body-cart__value">Цвет: белый</p>
+                      <p class="body-cart__value">Размер: 56</p>
+                    </div>
+                    <p class="body-cart__shop">Коледино WB</p>
+                    <div class="body-cart__info">
+                      <p>OOO Вайлдберриз</p>
+                      <div class="body-cart__info_icon">
+                        <img src="./public/images/cart/info.svg" alt="info" />
+                        <div class="body-cart__tooltip">
+                          <h4>OOO Вайлдберриз</h4>
+                          <h5>ОГРН: 5167746237148</h5>
+                          <p>
+                            129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2,
+                            офис 34
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-cart__right">
+                  <div class="body-cart__show">
+                    <div class="body-cart__counter counter">
+                      <div class="counter__decrement">
+                        <span>−</span>
+                      </div>
+                      <input type="number" class="counter__input" value="2" />
+                      <div class="counter__increment">
+                        <span>+</span>
+                      </div>
+                    </div>
+                    <p class="body-cart__remains">Осталось 2 шт.</p>
+                    <div class="body-cart__icons">
+                      <button class="body-cart__like">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                      <button class="body-cart__remove">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                            fill="black"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                            fill="black"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="body-cart__prices">
+                    <div class="body-cart__price"><span>522</span> сом</div>
+                    <div class="body-cart__oldprice oldprice">
+                      1051 сом
+                      <div class="oldprice__tooltip">
+                        <div><span>Скидка 55%</span><mark>−300 сом</mark></div>
+                        <div><span>Скидка покупателя 10%</span><mark>−30 сом</mark></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-cart__item">
+                <div class="body-cart__left">
+                  <div class="checkbox">
+                    <label class="checkbox__label">
+                      <input type="checkbox" checked class="checkbox__input" />
+                      <span class="checkbox__fake"></span>
+                    </label>
+                  </div>
+                  <div class="body-cart__img">
+                    <img src="./public/images/cart/item2.png" alt="product" />
+                  </div>
+                  <div class="body-cart__content">
+                    <h3 class="body-cart__title">
+                      Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на
+                      Apple iPhone XR, MobiSafe
+                    </h3>
+                    <div class="body-cart__values">
+                      <p class="body-cart__value">Цвет: прозрачный</p>
+                    </div>
+                    <p class="body-cart__shop">Коледино WB</p>
+                    <div class="body-cart__info">
+                      <p>OOO Мегапрофстиль</p>
+                      <div class="body-cart__info_icon">
+                        <img src="./public/images/cart/info.svg" alt="info" />
+                        <div class="body-cart__tooltip">
+                          <h4>OOO Мегапрофстиль</h4>
+                          <h5>ОГРН: 5167746237148</h5>
+                          <p>
+                            129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2,
+                            офис 34
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-cart__right">
+                  <div class="body-cart__show">
+                    <div class="body-cart__counter counter">
+                      <div class="counter__decrement">
+                        <span>−</span>
+                      </div>
+                      <input type="number" class="counter__input" value="2" />
+                      <div class="counter__increment">
+                        <span>+</span>
+                      </div>
+                    </div>
+                    <div class="body-cart__icons">
+                      <button class="body-cart__like">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                      <button class="body-cart__remove">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                            fill="black"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                            fill="black"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="body-cart__prices">
+                    <div class="body-cart__price"><span>2 100 047</span> сом</div>
+                    <div class="body-cart__oldprice oldprice">
+                      2 300 047 сом
+                      <div class="oldprice__tooltip">
+                        <div><span>Скидка 55%</span><mark>−2 300 047 сом</mark></div>
+                        <div><span>Скидка покупателя 10%</span><mark>−30 сом</mark></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-cart__item">
+                <div class="body-cart__left">
+                  <div class="checkbox">
+                    <label class="checkbox__label">
+                      <input type="checkbox" checked class="checkbox__input" />
+                      <span class="checkbox__fake"></span>
+                    </label>
+                  </div>
+                  <div class="body-cart__img">
+                    <img src="./public/images/cart/item3.png" alt="product" />
+                  </div>
+                  <div class="body-cart__content">
+                    <h3 class="body-cart__title">
+                      Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные,
+                      шестигранные, Faber-Castell
+                    </h3>
+                    <div class="body-cart__values">
+                      <p class="body-cart__value">Цвет: белый</p>
+                      <p class="body-cart__value">Размер: 56</p>
+                    </div>
+                    <p class="body-cart__shop">Коледино WB</p>
+                    <div class="body-cart__info">
+                      <p>OOO Вайлдберриз</p>
+                      <div class="body-cart__info_icon">
+                        <img src="./public/images/cart/info.svg" alt="info" />
+                        <div class="body-cart__tooltip">
+                          <h4>OOO Вайлдберриз</h4>
+                          <h5>ОГРН: 5167746237148</h5>
+                          <p>
+                            129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2,
+                            офис 34
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-cart__right">
+                  <div class="body-cart__show">
+                    <div class="body-cart__counter counter">
+                      <div class="counter__decrement">
+                        <span>−</span>
+                      </div>
+                      <input type="number" class="counter__input" value="2" />
+                      <div class="counter__increment">
+                        <span>+</span>
+                      </div>
+                    </div>
+                    <p class="body-cart__remains">Осталось 2 шт.</p>
+                    <div class="body-cart__icons">
+                      <button class="body-cart__like">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                      <button class="body-cart__remove">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                            fill="black"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                            fill="black"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="body-cart__prices">
+                    <div class="body-cart__price"><span>494</span> сом</div>
+                    <div class="body-cart__oldprice oldprice">
+                      950 сом
+                      <div class="oldprice__tooltip">
+                        <div><span>Скидка 55%</span><mark>−300 сом</mark></div>
+                        <div><span>Скидка покупателя 10%</span><mark>−30 сом</mark></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="total">
+            <div class="total__title">
+              <h2>Итого</h2>
+              <h3>2 101 063 сом</h3>
+            </div>
+            <div class="total__prices">
+              <div class="total__price">
+                <span>203 товара</span>
+                <span>2 302 048 сом</span>
+              </div>
+              <div class="total__price">
+                <span>Скидка</span>
+                <span>−200 985 сом</span>
+              </div>
+              <div class="total__price">
+                <span>Доставка</span>
+                <span>Бесплатно</span>
+              </div>
+            </div>
+            <div class="total__point point">
+              <div class="point__top">
+                <h3 class="point__title">Доставка в пункт выдачи</h3>
+                <div class="point__modal">
+                  <img src="./public/images/total/pen.svg" alt="pen" />
+                </div>
+              </div>
+              <p class="point__adres">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <div class="point__date">5–8 фев</div>
+              <div class="point__footer">
+                <div class="point__icon">
+                  <img src="./public/images/total/check.svg" alt="check" />
+                </div>
+                <div class="point__description">
+                  Обратная доставка товаров на склад при отказе — <span>бесплатно</span>
+                </div>
+              </div>
+            </div>
+            <div class="total__payment">
+              <div class="point__top">
+                <h3 class="point__title">Оплата картой</h3>
+                <div class="point__modal">
+                  <img src="./public/images/total/pen.svg" alt="pen" />
+                </div>
+              </div>
+              <div class="total__card">
+                <img src="./public/images/total/mir.svg" alt="card" />
+                <p>1234 12•• •••• 1234</p>
+              </div>
+              <div class="total__check">
+                <div class="checkbox">
+                  <label class="checkbox__label">
+                    <input type="checkbox" class="checkbox__input" />
+                    <span class="checkbox__fake"></span>
+                    <span class="checkbox__text">Списать оплату сразу</span>
+                  </label>
+                </div>
+                <div class="total__text">Спишем оплату с карты при получении</div>
+              </div>
+            </div>
+            <button class="total__button">Заказать</button>
+            <div class="total__info">
+              <div class="total__checkicon">
+                <img src="./public/images/total/check-black.svg" alt="check" />
+              </div>
+              <div class="total__links">
+                Соглашаюсь <a href="">с правилами пользования торговой площадкой</a> и
+                <a href=""> возврата</a>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
 
       <footer class="footer">
