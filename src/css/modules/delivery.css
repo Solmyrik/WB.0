@@ -1,0 +1,132 @@
+.delivery {
+  padding: 16px 24px 24px 24px;
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--black);
+}
+.delivery__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.delivery__title {
+  font-size: 24px;
+  font-style: normal;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+}
+.devivery__button {
+  padding: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--pink);
+  cursor: pointer;
+}
+.delivery__items {
+}
+.delivery__item {
+  display: flex;
+  margin-bottom: 16px;
+}
+.delivery__left {
+  flex: 0 0 177px;
+}
+.delivery__description {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.delivery__right {
+}
+.delivery__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.delivery__rating {
+  margin-top: 2px;
+  display: flex;
+  gap: 8px;
+}
+.delivery__products {
+  display: flex;
+  gap: 8px;
+}
+.delivery__product {
+  position: relative;
+}
+.delivery__product img {
+  width: 40px;
+  height: 56px;
+  border-radius: 8px;
+}
+.devilery__quantity {
+  background: var(--orange);
+  color: var(--white);
+  top: -10px;
+  right: -4px;
+  position: absolute;
+  padding: 1px 5px;
+  border-radius: 16px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13px;
+}
+.delivery__bottom {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.delivery__bottom img {
+  margin-right: 8px;
+}
+.delivery__label {
+  position: relative;
+}
+.delivery__label span {
+  color: var(--green);
+  position: relative;
+  cursor: pointer;
+  position: relative;
+}
+.delivery__info {
+  display: flex;
+  gap: 4px;
+}
+.delivery__label span:before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  bottom: -2px;
+  background-image: url(/public/images/total/dash-green.svg);
+}
+.delivery__label:hover .delivery__tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.delivery__tooltip {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 25px;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  max-width: 288px;
+  width: 288px;
+}
+.delivery__tooltip_wrapper {
+  padding: 11px 16px 13px 16px;
+}
