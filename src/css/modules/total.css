@@ -169,6 +169,7 @@
   line-height: 16px;
 }
 .total__button {
+  cursor: pointer;
   height: 44px;
   width: 100%;
   border-radius: 8px;

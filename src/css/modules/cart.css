@@ -40,6 +40,7 @@
 
 /* body-cart */
 .body-cart {
+  margin-bottom: 32px;
 }
 .body-cart__item {
   display: flex;

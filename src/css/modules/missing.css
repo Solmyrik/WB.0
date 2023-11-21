@@ -1,0 +1,81 @@
+.missing {
+}
+.missing__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.missing__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  gap: 3px;
+}
+.missing__arrow {
+}
+.missing__items {
+}
+.missing__item {
+  display: flex;
+  justify-content: space-between;
+}
+.missing__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.missing__left {
+  display: flex;
+}
+.missing__image {
+  margin-right: 16px;
+}
+.missing__image img {
+  filter: grayscale(1);
+  width: 72px;
+  height: 96px;
+  border-radius: 8px;
+}
+.missing__content {
+  color: #9797af;
+}
+.missing__name {
+  margin-bottom: 6.5px;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 309px;
+}
+.missing__values {
+  display: flex;
+  gap: 16px;
+}
+.missing__value {
+  line-height: 16px;
+}
+.missing__right {
+  margin-right: 134.5px;
+}
+.missing__icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.missing__like {
+  cursor: pointer;
+  padding: 0px;
+}
+.missing__remove {
+  cursor: pointer;
+  padding: 0px;
+}
+.missing__like:hover svg path {
+  fill: var(--pink);
+}
+.missing__remove {
+  cursor: pointer;
+  padding: 0;
+}
+.missing__remove:hover svg path {
+  fill: var(--orange);
+}
