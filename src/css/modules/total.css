@@ -1,0 +1,191 @@
+.total {
+  padding: 24px;
+  padding-top: 16px;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.total__title {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+  color: var(--black);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+.total__title span {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+.total__prices {
+  margin-bottom: 25px;
+}
+.total__price {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+}
+.total__point {
+}
+.point {
+  margin-bottom: 24px;
+}
+.point__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.point__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.point__modal {
+  cursor: pointer;
+}
+.point__adres {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.point__date {
+  display: inline-block;
+  color: #cb11ab;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  position: relative;
+  margin-bottom: 12px;
+}
+.point__date::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  bottom: -2px;
+  background-image: url('../../../public/images/total/dash.svg');
+}
+.point__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 12px 8px;
+  border-radius: 8px;
+  background: var(--light);
+  position: relative;
+}
+.point__icon {
+}
+.point__description {
+  display: flex;
+  flex-direction: column;
+}
+.point__description p {
+  color: var(--green);
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 61.7px;
+}
+.point__description:hover .point__tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.point__tooltip {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 55px;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+.point__tooltip_wrapper {
+  padding: 11px 16px 13px 16px;
+}
+.point__description p::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  bottom: -2px;
+  background-image: url('../../../public/images/total/dash-green.svg');
+}
+.total__payment {
+}
+.total__card {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 8px;
+}
+.total__card img {
+  width: 32px;
+  border-radius: 4px;
+  background: var(--light);
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.total__check {
+  padding: 8px 8px 12px 8px;
+  border-radius: 8px;
+  background: var(--light);
+  margin-bottom: 24px;
+}
+.total .checkbox__text {
+  font-size: 13px;
+  line-height: 16px;
+}
+.checkbox {
+}
+.checkbox__label {
+}
+.checkbox__input {
+}
+.checkbox__fake {
+}
+.checkbox__text {
+}
+.total__text {
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 16px;
+}
+.total__button {
+  height: 44px;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--pink);
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.total__info {
+  display: flex;
+  gap: 8px;
+}
+.total__checkicon {
+}
+.total__links a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1px;
+}

@@ -52,8 +52,11 @@
   display: flex;
   /* align-items: center; */
 }
-.checkbox {
+.body-cart__left .checkbox {
   margin-top: 39px;
+}
+.checkbox {
+  /* margin-top: 39px; */
 }
 .checkbox__label {
 }

@@ -7,4 +7,5 @@
   grid-template-columns: 2fr 1fr;
   padding-top: 24px;
   padding-bottom: 24px;
+  gap: 15px;
 }
