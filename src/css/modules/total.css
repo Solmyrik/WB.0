@@ -1,4 +1,5 @@
 .total {
+  margin-left: 16px;
   padding: 24px;
   padding-top: 16px;
   border-radius: 16px;
@@ -53,6 +54,7 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
+  margin-bottom: 3px;
 }
 .point__date {
   display: inline-block;
@@ -96,7 +98,7 @@
   cursor: pointer;
   width: 61.7px;
 }
-.point__description:hover .point__tooltip {
+.point__description p:hover + .point__tooltip {
   opacity: 1;
   visibility: visible;
 }
@@ -189,4 +191,67 @@
 .total__links a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 1px;
+}
+
+@media (max-width: 992.9px) {
+  .total {
+    margin-left: 0;
+  }
+  .point__top,
+  .point__adres,
+  .point__date,
+  .total__card {
+    display: none;
+  }
+  .point__description {
+    flex-direction: row;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 1100.9px) {
+  .total {
+    padding-bottom: 35px;
+  }
+  .point__description {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (max-width: 767.9px) {
+  .total {
+    background-color: var(--ligth);
+    box-shadow: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+  }
+  .point__footer {
+    background-color: #f0ecf4;
+  }
+  .total__payment {
+    background-color: #f0ecf4;
+    border-radius: 8px;
+  }
+  .total__check {
+    background-color: #f0ecf4;
+    border-radius: 8px;
+  }
+  .point__description {
+    display: block;
+  }
+  .point__description p {
+    display: inline;
+  }
+  .total__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .total__prices {
+    margin-bottom: 16px;
+  }
+  .point {
+    margin-bottom: 14px;
+  }
 }

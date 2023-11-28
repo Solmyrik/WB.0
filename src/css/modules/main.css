@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: 400;
@@ -20,7 +20,7 @@
   font-weight: 700;
   src: url('../../public/fonts/SegoeUI-Bold.woff2') format('woff2'),
     url('../../public/fonts/SegoeUI-Bold.woff') format('woff');
-}
+} */
 
 html {
   height: 100%;
@@ -47,5 +47,11 @@ main {
 [class*='__container'] {
   max-width: 1410px;
   margin: 0 auto;
-  padding: 0px 15px;
+  padding: 0px 24px;
+}
+@media (max-width: 491.9px) {
+  [class*='__container'] {
+    /* padding: 0px 16px; */
+    padding: 0;
+  }
 }

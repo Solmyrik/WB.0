@@ -12,8 +12,9 @@
 }
 .checkbox__fake {
   display: inline-block;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
   border: 1px solid #c5c5c8;
   border-radius: 5px;
   position: relative;
@@ -64,3 +65,99 @@
   display: inline-block;
 }
 /* checkbox end */
+
+.size-16 {
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/* radiobox */
+.radiobox__label {
+  align-items: center;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+.radiobox__input {
+  display: none;
+}
+.radiobox__fake {
+  min-width: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  border: 1px solid #c5c5c8;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.radiobox__fake::before {
+  content: '';
+  position: absolute;
+  /* // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%); */
+  display: block;
+  background-color: var(--pink);
+  border-radius: 50%;
+  top: -0.5px;
+  left: -0.5px;
+  width: 105%;
+  height: 105%;
+  transition: 0.3s;
+  opacity: 0;
+}
+.radiobox__fake::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  /* background-image: url('../../../public/images/cart/check.svg'); */
+  width: 9px;
+  height: 9px;
+  background-color: var(--white);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: none;
+}
+.radiobox__input:checked + .radiobox__fake::before {
+  opacity: 1;
+}
+.radiobox__input:checked + .radiobox__fake::after {
+  display: block;
+}
+.radiobox__input:checked + .radiobox__fake {
+  border: 1px solid var(--pink);
+}
+.radiobox__text {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 10px;
+  color: var(--black);
+  display: inline-block;
+}
+
+.radiobox__text {
+  display: flex;
+  align-items: center;
+}
+
+.rediobox__img {
+  width: 32px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: var(--light);
+  margin-right: 4px;
+}
+/* radiobox end */

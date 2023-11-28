@@ -1,11 +1,15 @@
 .missing {
   margin-bottom: 38px;
+  /* display: none; */
+  /* display: none; */
 }
+
 .missing__top {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
   padding-bottom: 18px;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .missing__title {
@@ -16,12 +20,25 @@
   gap: 3px;
 }
 .missing__arrow {
+  padding: 0;
+  height: 20px;
+  cursor: pointer;
+  transform: rotate(180deg);
 }
+.missing__arrow.active {
+  transform: rotate(0deg);
+}
+
 .missing__items {
+  display: none;
+}
+.missing__items.active {
+  display: block;
 }
 .missing__item {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .missing__item:not(:last-child) {
   margin-bottom: 30px;
@@ -55,7 +72,7 @@
   line-height: 16px;
 }
 .missing__right {
-  margin-right: 134.5px;
+  margin-right: 126.5px;
 }
 .missing__icons {
   display: flex;
@@ -65,6 +82,9 @@
 .missing__like {
   cursor: pointer;
   padding: 0px;
+}
+.missing__like.active svg path {
+  fill: var(--pink);
 }
 .missing__remove {
   cursor: pointer;
@@ -79,4 +99,69 @@
 }
 .missing__remove:hover svg path {
   fill: var(--orange);
+}
+.missing__size-mob {
+  display: none;
+}
+@media (max-width: 767.9px) {
+  .missing {
+    margin-bottom: 15px;
+  }
+  .missing__right {
+    margin-right: 12px;
+  }
+  .missing__icons {
+    gap: 24px;
+  }
+  .missing__top {
+    padding-right: 4px;
+  }
+  .missing__size-mob {
+    position: absolute;
+    top: 79px;
+    left: 4px;
+    z-index: 3;
+    /* width: 22px; */
+    padding: 0px 3px;
+    height: 22px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 6px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 491.9px) {
+  .missing__image img {
+    width: 80px;
+    height: 106px;
+  }
+  .missing__value:not(:first-child) {
+    display: none;
+  }
+  .missing__name {
+    font-size: 14px;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+  .missing__icons {
+    position: absolute;
+    right: 4px;
+    bottom: 18px;
+  }
+  .missing__left {
+    min-width: 100%;
+  }
+  .missing__item {
+    padding-bottom: 49px;
+  }
+  .missing__item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+  }
 }

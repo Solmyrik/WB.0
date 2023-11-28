@@ -1,10 +1,17 @@
 .footer {
   text-align: center;
-  padding: 23px 0;
+  padding: 24px 0;
 }
 .footer__container {
+  padding: 0px 23px;
 }
 .footer__copywriting {
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
+  line-height: 16px;
+}
+@media (max-width: 491.9px) {
+  .footer {
+    margin-bottom: 56px;
+  }
 }
