@@ -17,7 +17,6 @@ export function onIncrement(increment) {
     const newPrice = subtractPercentage(state.products[id].oldPrice, state.products[id].discount);
     priceUpdate(price, state.products[id].quantity, newPrice);
     oldPriceUpdate(oldPrice, state.products[id].quantity, state.products[id].oldPrice);
-    console.log(price);
   }
 
   const isDarkening = state.products[id].quantity === state.products[id].max;
@@ -30,6 +29,7 @@ export function onIncrement(increment) {
   allPriceUpdate();
   allOldPriceUpdate();
   discountUpdate();
+  updateLabel();
 }
 
 // функция, которая декрементирует счетчик, если проходит проверки
@@ -42,8 +42,6 @@ export function onDecrement(decrement) {
   const price = document.querySelector(`#${state.products[id].price}`);
   const oldPrice = document.querySelector(`#${state.products[id].priceOld}`);
 
-  console.log(counter);
-
   if (current > 1) {
     state.products[id].quantity -= 1;
     counter.value = state.products[id].quantity;
@@ -51,7 +49,6 @@ export function onDecrement(decrement) {
     const newPrice = subtractPercentage(state.products[id].oldPrice, state.products[id].discount);
     priceUpdate(price, state.products[id].quantity, newPrice);
     oldPriceUpdate(oldPrice, state.products[id].quantity, state.products[id].oldPrice);
-    console.log(price);
   }
 
   const isDarkening = state.products[id].quantity === 1;
@@ -64,6 +61,7 @@ export function onDecrement(decrement) {
   allQuantityUpdate();
   allOldPriceUpdate();
   discountUpdate();
+  updateLabel();
 }
 
 // функция для обновления цены
@@ -216,9 +214,9 @@ export function changeMainCheckbox(checbox) {
   const checkbox2 = document.querySelector('#checkbox2');
   const checkbox3 = document.querySelector('#checkbox3');
   if (!checbox.checked) {
-    checkbox1.checked = false;
-    checkbox2.checked = false;
-    checkbox3.checked = false;
+    if (checkbox1) checkbox1.checked = false;
+    if (checkbox2) checkbox2.checked = false;
+    if (checkbox3) checkbox3.checked = false;
 
     state.products.product1.checked = false;
     state.products.product2.checked = false;
@@ -230,21 +228,23 @@ export function changeMainCheckbox(checbox) {
     allOldPriceUpdate();
     discountUpdate();
     updateAllProducts();
+    updateLabel();
   } else {
-    checkbox1.checked = true;
-    checkbox2.checked = true;
-    checkbox3.checked = true;
+    if (checkbox1) checkbox1.checked = true;
+    if (checkbox2) checkbox2.checked = true;
+    if (checkbox3) checkbox3.checked = true;
 
-    state.products.product1.checked = true;
-    state.products.product2.checked = true;
-    state.products.product3.checked = true;
-    state.allProducts = 3;
+    if (checkbox1) state.products.product1.checked = true;
+    if (checkbox2) state.products.product2.checked = true;
+    if (checkbox3) state.products.product3.checked = true;
+    state.allProducts = countingProducts();
 
     allQuantityUpdate();
     allPriceUpdate();
     allOldPriceUpdate();
     discountUpdate();
     updateAllProducts();
+    updateLabel();
   }
 }
 
@@ -253,8 +253,6 @@ export function changeMainCheckbox(checbox) {
 function updateAllProducts() {
   const quantity = document.querySelector('.header__quantity');
   const quantityMob = document.querySelector('.menu-mob__quantity');
-
-  console.log(quantity);
 
   quantity.textContent = state.allProducts;
   quantityMob.textContent = state.allProducts;
@@ -273,6 +271,7 @@ export function changeCheckbox(checkbox, product) {
     allOldPriceUpdate();
     discountUpdate();
     updateAllProducts();
+    updateLabel();
   } else {
     state.products[product].checked = true;
     state.products.product2.checked = true;
@@ -284,6 +283,7 @@ export function changeCheckbox(checkbox, product) {
     allOldPriceUpdate();
     discountUpdate();
     updateAllProducts();
+    updateLabel();
   }
 }
 
@@ -310,6 +310,7 @@ export function removeCart(itemRemove) {
   allOldPriceUpdate();
   discountUpdate();
   updateAllProducts();
+  updateLabel();
 
   item.remove();
 }
@@ -322,9 +323,78 @@ function countingProducts() {
   if (state.products.product2.checked === true) result++;
   if (state.products.product3.checked === true) result++;
 
-  console.log(result, 're');
-
   state.allProducts = result;
 
   return result;
+}
+
+const labelOption = {
+  'product-label-1': 'product1',
+  'product-label-2': 'product2',
+  'product-label-3': 'product3',
+};
+
+// функция, которая обновляет значения ярлыков с количеством товаровов в блоке "Способ доставки"
+
+function updateLabel() {
+  const deliveryItem1 = document.querySelector('#delivery-data1');
+
+  let counterDelete = 0;
+
+  for (let key in labelOption) {
+    const currentItem = deliveryItem1.querySelector(`#${key}`);
+    const currentLabel = deliveryItem1.querySelector(`#${key} div`);
+    let value = state.products[labelOption[key]].quantity;
+
+    if (value > 186) value = 186;
+
+    if (currentLabel) currentLabel.textContent = value;
+
+    if (value === 1 && !currentLabel.className.includes('none')) {
+      currentLabel.classList.add('none');
+      counterDelete++;
+    }
+
+    if (value > 1 && currentLabel.className.includes('none')) {
+      currentLabel.classList.remove('none');
+    }
+
+    if (value > 0 && currentItem.className.includes('none')) {
+      currentItem.classList.remove('none');
+    }
+
+    if (value === 0 || !state.products[labelOption[key]].checked) {
+      currentItem.classList.add('none');
+      counterDelete++;
+    }
+  }
+
+  if (counterDelete === 3) {
+    deliveryItem1.classList.add('none');
+  } else {
+    deliveryItem1.classList.remove('none');
+  }
+
+  updateLabelNextDate();
+}
+
+// функция, которая обновляет значения ярлыков с количеством товаровов для элемента на другую дату
+
+function updateLabelNextDate() {
+  const deliveryItem2 = document.querySelector('#delivery-data2');
+  const currentItem = document.querySelector('#product-label-2-1 div');
+  let value = state.products.product2.quantity;
+
+  if (value > 186 && state.products.product2.checked) {
+    deliveryItem2.classList.remove('none');
+    currentItem.textContent = value - 186;
+  } else {
+    deliveryItem2.classList.add('none');
+  }
+
+  if (value - 186 === 1) {
+    currentItem.classList.add('none');
+  } else {
+    currentItem.classList.remove('none');
+  }
 }

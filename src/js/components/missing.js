@@ -20,8 +20,6 @@ export function deleteMissingCart(itemRemove, counter) {
   item.remove();
   state.missing = state.missing - 1;
 
-  console.log(counter);
-
   counter.textContent =
     state.missing > 1 ? `Отсутствуют · ${state.missing} товара` : textOptions[state.missing];
 }

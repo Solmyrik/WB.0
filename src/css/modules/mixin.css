@@ -161,3 +161,7 @@
   margin-right: 4px;
 }
 /* radiobox end */
+
+.none {
+  display: none !important;
+}

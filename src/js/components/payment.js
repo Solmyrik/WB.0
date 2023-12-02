@@ -1,8 +1,8 @@
 const paymentOption = {
-  radio1: './public/images/popup/mir.svg',
-  radio2: './public/images/popup/visa.svg',
-  radio3: './public/images/popup/mastercard.svg',
-  radio4: './public/images/popup/maestro.svg',
+  radio1: '/public/images/popup/mir.svg',
+  radio2: '/public/images/popup/visa.svg',
+  radio3: '/public/images/popup/mastercard.svg',
+  radio4: '/public/images/popup/maestro.svg',
 };
 
 // функция для управления выбора способа оплаты

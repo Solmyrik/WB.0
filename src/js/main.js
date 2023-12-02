@@ -95,7 +95,6 @@ tel.addEventListener('input', (event) => {
 // валидация в случае нажатия кнопки
 
 totalButton.addEventListener('click', () => {
-  console.log('click');
   formInputs.forEach((input) => {
     validate(input);
     checkEmptiness(input);
@@ -204,7 +203,6 @@ triggers.forEach((trigger, index) => {
 const radioClose = document.querySelectorAll('.radio__close');
 
 radioClose.forEach((radio) => {
-  console.log(radio);
   radio.addEventListener('click', () => {
     deleteRadio(radio);
   });
